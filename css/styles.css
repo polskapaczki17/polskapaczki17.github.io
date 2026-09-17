@@ -1,0 +1,106 @@
+/*
+Author: Santino Taylor
+Date: 9/17/2026
+File Name: styles.css
+*/
+
+/* CSS reset rules to force cross-browser consistency by removing the default styles set by browsers.  */
+body, header, nav, footer, main, div, h1, iframe, img{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	/* For testing and developmental purposes*/
+	/*border: 2px solid #F00;*/
+}
+/* style rules for body and images */
+body{
+	background-color: rgb(16, 16, 16);
+	padding-bottom: 60px;
+}
+
+img{
+	max-width: 100%;
+	display: block;
+}
+
+.trophy_pictures{
+	width: 325px;
+	float: left;
+}
+
+header{
+	height: 20%
+}
+
+/* style rules for navigation */
+nav{
+	width: 100%;
+	float: right;
+	margin: 5em 3em 2em 0;
+}
+
+nav ul{
+	list-style-type: none;
+	margin: 0;
+	text-align: right;
+}
+
+nav li{
+	display: inline-block;
+	font-size: 1.4em;
+	font-weight: bold;
+	font-family: arial, sans-serif;
+}
+
+nav li a{
+	display: block;
+	color: rgb(240, 240, 240);
+	text-align: center;
+	padding: 0.5em 1em;
+	text-decoration: none;
+}
+
+#container {
+	color: rgb(240, 240, 240);
+	font-family: arial, sans-serif;
+	padding-left: 3%;
+	padding-right: 3%;
+}
+/*
+#container h1{
+	padding-left: 37%;
+	padding-right: 37%;
+}
+
+#container p{
+	padding-left: 37%;
+	padding-right: 37%;
+}
+*/
+
+.programming_languages{
+	font-weight: bold;
+}
+
+.external-link{
+	color: #4099ff;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.map{
+	/*border: 8px solid #000;*/
+	width: 600px;
+	height: 450px; 	
+}
+
+footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	
+	text-align: center;
+}
+
