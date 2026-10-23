@@ -1,0 +1,339 @@
+/*
+Author: Santino Taylor
+Date: 9/17/2026
+File Name: styles.css
+*/
+
+/* CSS reset rules to force cross-browser consistency by removing the default styles set by browsers.  */
+body, header, nav, footer, main, div, h1, iframe, img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	overflow-x: hidden;
+	/* For testing and developmental purposes*/
+	/*border: 2px solid #F00;*/
+}
+
+/* styles for the HTML page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* style rules for body and images */
+body {
+	background-color: rgb(16, 16, 16);
+	padding-top: clamp(3.5rem, 12vw, 6rem);
+	padding-bottom: 60px;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+.trophy_pictures {
+	width: 325px;
+	float: left;
+}
+
+/* style rules for the top bar for a smooth transition between screen sizes.*/
+#top-bar {
+	box-sizing: border-box;
+	background-color: rgb(16, 16, 16);
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: clamp(3.5rem, 12vw, 6rem);
+	padding: 0 clamp(0.75rem, 3vw, 1.5rem);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+
+  	color: rgb(240, 240, 240);
+	font-family: "Inter", sans-serif;
+	text-align: center;
+}
+
+header {
+	min-width: 0;
+	margin: 0;
+	font-size: clamp(1.35rem, 3.5vw, 2.25rem);
+	line-height: 1.1;
+	overflow: hidden;
+}
+
+#mobile-menu {
+	display: block;
+	position: fixed;
+	z-index: 3;
+	top: clamp(3.5rem, 12vw, 6rem);
+	right: 0;
+	bottom: 0;
+	left: 0;
+	min-width: 0;
+	margin: 0;
+	font-size: clamp(0.9rem, 1.35vw, 1.3rem);
+	line-height: 1.1;
+	overflow-y: auto;
+	padding: 0 clamp(0.75rem, 1vw, 1.5rem);
+	opacity: 1;
+	visibility: visible;
+	transition: opacity 0.5s ease, visibility 0s;
+}
+
+#mobile-menu.hidden {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: opacity 0.5s ease, visibility 0s linear 0.5s;
+}
+
+#mobile-menu-shader {
+	display: block;
+	position: fixed;
+	top: clamp(3.5rem, 12vw, 6rem);
+	right: 0;
+	bottom: 0;
+	left: 0;
+	min-width: 0;
+	margin: 0;
+	font-size: clamp(0.9rem, 1.35vw, 1.3rem);
+	line-height: 1.1;
+	overflow-y: auto;
+	background-color: transparent;
+	padding: 0 clamp(0.75rem, 1vw, 1.5rem);
+	background-color: rgb(16, 16, 16);
+	opacity: 0.70;
+	pointer-events: none;
+	transition: opacity 0.5s ease;
+}
+
+#mobile-menu.hidden #mobile-menu-shader {
+	opacity: 0;
+}
+
+#mobile-menu ul {
+	position: relative;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+#mobile-menu li {
+	display: block;
+	font-weight: bold;
+	font-family: "Inter", sans-serif;
+	padding: 0.5rem 0;
+}
+
+.gradient-menu-text {
+	display: block;
+	text-align: center;
+	padding: 1rem 1rem;
+	text-decoration: none;
+	font-family: "Inter", sans-serif;
+	font-size: clamp(2.25rem, 3.5vw, 2.75rem);
+
+	background-image: linear-gradient(to right, #F0F0F0, #706d6d, #F0F0F0);
+	background-size: 350% auto;
+	background-position: 0% center;
+	background-clip: text;
+	color: transparent;
+	transition: background-position 0.6s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.gradient-menu-text:hover {
+	background-position: 100% center; /* switched it opposite */
+	/*font-size: clamp(2.75rem, 4vw, 3rem);*/
+	transform: scale(1.2);
+}
+
+#menu-icon {
+	display: block;
+	flex: 0 0 clamp(2rem, 8vw, 3rem);
+	width: clamp(2rem, 8vw, 3rem);
+	height: auto;
+	aspect-ratio: 1;
+	margin: 0;
+}
+
+#menu-icon:hover {
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+.active-menu {
+	opacity: 1;
+}
+
+.active-shader {
+	opacity: 0.70;
+}
+
+/* style rules for navigation */
+nav {
+	display: none;
+	min-width: 0;
+	margin: 0;
+	font-size: clamp(1rem, 1.4vw, 1.35rem);
+	line-height: 1.1;
+	overflow: hidden;
+	background-color: rgb(25, 25, 25);
+	padding: 0 clamp(0.75rem, 1vw, 1.5rem);
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+nav li {
+	display: inline-block;
+	font-weight: bold;
+	font-family: "Inter", sans-serif;
+}
+
+nav li a {
+	display: block;
+	color: rgb(240, 240, 240);
+	text-align: center;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+}
+
+#container {
+	color: rgb(240, 240, 240);
+	font-family: "Inter", sans-serif;
+	text-align: center;
+}
+
+section{
+	width: 85%;
+	margin: 2% auto;
+	padding: 1%;
+	height: 25%;
+	background-color: rgb(25, 25, 25);
+	border-radius: 1rem;
+	box-shadow: 0rem 0rem 2rem 0.2rem #F0F0F0;
+}
+
+section h1{
+	text-align: left;
+	font-size: clamp(1.5rem, 2vw, 1.75rem);
+}
+
+section li{
+	padding: 0.5%;
+	text-align: left;
+	list-style-position: inside;
+	font-size: clamp(1.2rem, 1.5vw, 1.4rem);
+}
+
+section li a:visited{
+	color: rgb(11, 155, 221);
+	text-decoration: underline;
+}
+
+section li a:link{
+	color: rgb(240, 240, 240);
+	text-decoration: underline;
+}
+
+/*
+#container h1 {
+	padding-left: 37%;
+	padding-right: 37%;
+}
+
+#container p {
+	padding-left: 37%;
+	padding-right: 37%;
+}
+*/
+
+.programming_languages {
+	font-weight: bold;
+}
+
+.external-link {
+	color: #4099ff;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.map {
+	/*border: 8px solid #000;*/
+	width: 600px;
+	height: 450px; 	
+}
+
+footer {
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 2rem;
+	text-align: center;
+}
+
+/* Media queries for responsive design */
+/* Tablet styles */
+/* Tablet specifications: 
+No hamburger menu, provide the text links in the nav bar.
+*/
+
+@media screen and (min-width: 680px) {
+    #menu-icon {
+	  display: none;
+	}
+  
+	nav {
+	  display: block;
+	}
+
+	#projects-grid-container {
+		display: block;
+	}
+}
+
+/* Desktop styles (1024px and up) */
+/* Desktop specifications:
+Grid pattern for projects page
+*/
+@media screen and (min-width: 1024px) {
+	/*section {
+		width: 25%;
+	}*/
+
+	#projects-grid-container {
+		display: grid;
+		grid-template-columns: auto auto auto;
+		gap: 1rem;
+	}
+}
+
+@keyframes appear-menu {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes appear-shader {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 0.70;
+	}
+}

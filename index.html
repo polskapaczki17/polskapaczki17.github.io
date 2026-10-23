@@ -4,21 +4,41 @@ template.html
 9/17/2026
  -->
 <html lang="en">
-	
 	<!-- meta data about the webpage -->
 	<head>
 		<title>Santino Taylor's Portfoilo</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="css/styles.css" type="text/css">
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+
+		<!-- font data -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+		
+		<!-- JavaScript -->
+		<script src="main.js" defer></script>
 	</head>
 	
 	<!-- all of the webpage contents -->
 	<body>
-		<div id="container">
-			<header>
-				Santino Taylor's Portfoilo
-			</header>
+		<div id="top-bar">
+			<header>Santino Taylor</header>
 			
+			<img id="menu-icon" src="images/menu_icon.svg" alt="Menu icon">
+		</div>
+
+		<div id="mobile-menu" class="hidden">
+			<div id="mobile-menu-shader"></div>
+
+			<ul>
+				<li><a href="index.html" class="gradient-menu-text">Home</a></li>
+				<li><a href="projects.html" class="gradient-menu-text">My Projects</a></li>
+				<li><a href="about.html" class="gradient-menu-text">About</a></li>
+				<li><a href="contact_me.html" class="gradient-menu-text">Contact me</a></li>
+			</ul>
+		</div>
+
+		<div id="container">
 			<!-- webpage navigation hyperlinks to go to other pages on the web domain -->
 			<nav>
 				<ul>

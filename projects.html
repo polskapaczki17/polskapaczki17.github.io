@@ -4,21 +4,41 @@ template.html
 9/24/2026
  -->
 <html lang="en">
-	
 	<!-- meta data about the webpage -->
 	<head>
 		<title>Santino Taylor's Portfoilo</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="css/styles.css" type="text/css">
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+
+		<!-- font data -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+		
+		<!-- JavaScript -->
+		<script src="main.js" defer></script>
 	</head>
 	
 	<!-- all of the webpage contents -->
 	<body>
-		<div id="container">
-			<header>
-				Santino Taylor's Portfoilo
-			</header>
+		<div id="top-bar">
+			<header>Santino Taylor</header>
 			
+			<img id="menu-icon" src="images/menu_icon.svg" alt="Menu icon">
+		</div>
+
+		<div id="mobile-menu" class="hidden">
+			<div id="mobile-menu-shader"></div>
+
+			<ul>
+				<li><a href="index.html" class="gradient-menu-text">Home</a></li>
+				<li><a href="projects.html" class="gradient-menu-text">My Projects</a></li>
+				<li><a href="about.html" class="gradient-menu-text">About</a></li>
+				<li><a href="contact_me.html" class="gradient-menu-text">Contact me</a></li>
+			</ul>
+		</div>
+
+		<div id="container">
 			<!-- webpage navigation hyperlinks to go to other pages on the web domain -->
 			<nav>
 				<ul>
@@ -28,31 +48,54 @@ template.html
 					<li><a href="contact_me.html">Contact me</a></li>
 				</ul>
 			</nav>
-			
-			<h1>Python Projects</h1>
-			<ol>
-				<li></li>
-			</ol>
-			<h1>Java Projects</h1>
-			<ol>
-				<li></li>
-			</ol>
-			<h1>Website Projects (HTML & CSS)</h1>
-			<ol>
-				<li><a href="projects/fitness_chapter_3/index.html" target="_blank">Fitness Club: Chapter 3 Edition</a></li>
-				
-				<li><a href="projects/fitness_chapter_4/index.html" target="_blank">Fitness Club: Chapter 4 Edition</a></li>
-			</ol>
-			<h1>Website Projects (JavaScript)</h1>
-			<ol>
-				<li><a href="projects/JS_chapter_1/js01a.html" target="_blank">JavaScript Chapter 1A (JS Embedded)</a></li>
-				<li><a href="projects/JS_chapter_1/js01b.html" target="_blank">JavaScript Chapter 1B (JS External)</a></li>
+			<div class="projects-grid-container">
+				<section>
+					<h1>Python Projects</h1>
+					<ol>
+						<li></li>
+					</ol>
+				</section>
 
-				<li><a href="projects/JS_project02_chapter_1/project01-02.html" target="_blank">JavaScript Project 2 Chapter 1</a></li>
+				<section>
+					<h1>Java Projects</h1>
+					<ol>
+						<li></li>
+					</ol>
+				</section>
 
-				<li><a href="projects/JS_project04_chapter_1/project01-04.html" target="_blank">JavaScript Project 4 Chapter 1</a></li>
-			<ol>
-			
+				<section>
+					<h1>Website Projects (HTML & CSS)</h1>
+					<ol>
+						<li><a href="projects/html_projects/fitness_chapter3/index.html" target="_blank">Fitness Club: Chapter 3 Edition</a></li>
+						
+						<li><a href="projects/html_projects/fitness_chapter4/index.html" target="_blank">Fitness Club: Chapter 4 Edition</a></li>
+
+						<li><a href="projects/html_projects/fitness_chapter5/index.html" target="_blank">Fitness Club: Chapter 5 Edition</a></li>
+						
+						<li><a href="projects/html_projects/fitness_chapter6/index.html" target="_blank">Fitness Club: Chapter 6 Edition</a></li>
+					</ol>
+				</section>
+
+				<section>
+					<h1>Website Projects (JavaScript)</h1>
+					<ol>
+						<li><a href="projects/javascript_projects/js_chapter1/js01a.html" target="_blank">JavaScript Chapter 1A (JS Embedded)</a></li>
+						<li><a href="projects/javascript_projects/js_chapter1/js01b.html" target="_blank">JavaScript Chapter 1B (JS External)</a>
+							<ul>
+								<li><a href="projects/javascript_projects/js_chapter1_project2/project01-02.html" target="_blank">JavaScript Chapter 1 Project 2</a></li>
+								<li><a href="projects/javascript_projects/js_chapter1_project4/project01-04.html" target="_blank">JavaScript Chapter 1 Project 4</a></li>
+							</ul>
+						</li>
+						
+						<li><a href="projects/javascript_projects/js_chapter2/js02.html" target="_blank">JavaScript Chapter 2 Photography</a>
+							<ul>
+								<li><a href="projects/javascript_projects/js_chapter2_project3/project02-03.html" target="_blank">JavaScript Chapter 2 Project 3</a></li>
+								<li><a href="projects/javascript_projects/js_chapter2_project4/project02-04.html" target="_blank">JavaScript Chapter 2 Project 4</a></li>
+							</ul>
+						</li>
+					</ol>
+				</section>
+			</div>
 			<!-- the very bottom of the page where it contains copyright, trademarks, Terms and Conditions, privacy policy, and more important documents. -->
 			<footer>
 				<p>Personal Email Address: <a href="mailto:santinotaylor2009@gmail.com">santinotaylor2009@gmail.com</a><br>
@@ -60,6 +103,6 @@ template.html
 				
 				<p>© Copyright 2026. All Rights Reserved.</p>
 			</footer>
-			</div>
+		</div>
 	</body>
 </html>
