@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <!-- By Sonny
 template.html
-9/17/2026
+11/1/2026
  -->
 <html lang="en">
-	<!-- meta data about the webpage -->
+	<!-- metadata about the webpage -->
 	<head>
 		<title>Santino Taylor's Portfoilo</title>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="css/style.css" type="text/css">
 
 		<!-- font data -->
@@ -58,6 +59,36 @@ template.html
 			
 			<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5037.57745646347!2d-81.6254573307902!3d41.344496169893006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830e6e78703e651%3A0xa63e081ce183e4da!2s8001%20Brecksville%20Rd%2C%20Brecksville%2C%20OH%2044141!5e0!3m2!1sen!2sus!4v1789054857799!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 			
+			<!-- create our form for any message -->
+			<form>
+				<fieldset>
+					<legend>Message Me Form</legend>
+					<!-- divide up the questions with div so it is cleaner -->
+					<div>
+						<label for="firstName">First name:</label>
+						<input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+					</div>
+
+					<div>
+						<label for="lastName">Last name:</label>
+						<input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+					</div>
+
+					<div>
+						<label for="email">Email:</label>
+						<input type="text" id="email" name="email" placeholder="Email" required>
+					</div>
+
+					<div>
+						<label for="user-message">Message</label>
+						<textarea id="user-message" name="user-message" rows="5" cols="40" placeholder="Please enter your message." required></textarea>
+					</div>
+
+					<div>
+						<button type="submit">Send message</button>
+					</div>
+				</fieldset>
+			</form>
 			<!-- the very bottom of the page where it contains copyright, trademarks, Terms and Conditions, privacy policy, and more important documents. -->
 			<footer>
 				<!--
