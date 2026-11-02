@@ -1,6 +1,6 @@
 /*
 Author: Santino Taylor
-Date: 9/17/2026
+Date: 11/1/2026
 File Name: styles.css
 */
 
@@ -214,6 +214,10 @@ nav li a {
 	text-align: center;
 }
 
+.about-container h1, .about-container h2, .about-container ul, .about-container ol, .about-container dl{
+	text-align: left;
+}
+
 section{
 	width: 85%;
 	margin: 2% auto;
@@ -246,6 +250,31 @@ section li a:link{
 	text-decoration: underline;
 }
 
+#coursework-table {
+	display: none;
+}
+
+#coursework-table table {
+	border-collapse: collapse;
+	margin: 0 auto;
+	table-layout: fixed;
+	width: 97%;
+}
+
+#coursework-table caption {
+	font-size: 2rem;
+	font-weight: bold;
+	padding: 1%;
+}
+
+#coursework-table th, #coursework-table td {
+	border: 1px solid white;
+	text-align: left;
+	padding: 1%;
+	margin: 1%;
+	font-size: 1.25rem;
+}
+
 /*
 #container h1 {
 	padding-left: 37%;
@@ -270,8 +299,16 @@ section li a:link{
 
 .map {
 	/*border: 8px solid #000;*/
-	width: 600px;
-	height: 450px; 	
+	width: clamp(17rem, 60vw, 45rem);;
+	height: clamp(12rem, 35vw, 27rem);;
+}
+
+form {
+	text-align: center;
+}
+
+#user-message {
+	resize: none;
 }
 
 footer {
@@ -298,6 +335,10 @@ No hamburger menu, provide the text links in the nav bar.
 	}
 
 	#projects-grid-container {
+		display: block;
+	}
+
+	#coursework-table {
 		display: block;
 	}
 }
