@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- By Sonny
 template.html
-11/1/2026
+11/7/2026
  -->
 <html lang="en">
 	<!-- metadata about the webpage -->
@@ -11,6 +11,14 @@ template.html
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="css/style.css" type="text/css">
 		
+		<!-- Favicon data -->
+		<link rel="icon" type="image/png" href="favicon/favicon-96x96.png?v=20261107" sizes="96x96"/>
+		<link rel="icon" type="image/svg+xml" href="favicon/favicon.svg?v=20261107"/>
+		<link rel="shortcut icon" href="favicon/favicon.ico?v=20261107"/>
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png?v=20261107"/>
+		<meta name="apple-mobile-web-app-title" content="Santino"/>
+		<link rel="manifest" href="favicon/site.webmanifest?v=20261107"/>
+
 		<!-- font data -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,28 +33,32 @@ template.html
 		<div id="top-bar">
 			<header>Santino Taylor</header>
 			
-			<img id="menu-icon" src="images/menu_icon.svg" alt="Menu icon">
+			<img id="menu-icon" class="mobile" src="images/menu_icon.svg" alt="Menu icon">
 		</div>
 
-		<div id="mobile-menu" class="hidden">
-			<div id="mobile-menu-shader"></div>
+		<div id="mobile-menu" class="mobile hidden">
+			<div id="mobile-menu-shader" class="mobile"></div>
 
 			<ul>
-				<li><a href="index.html" class="gradient-menu-text">Home</a></li>
-				<li><a href="projects.html" class="gradient-menu-text">My Projects</a></li>
-				<li><a href="about.html" class="gradient-menu-text">About</a></li>
-				<li><a href="contact_me.html" class="gradient-menu-text">Contact me</a></li>
+				<li><a href="index.html" class="gradient-mobile-menu-text">Home</a></li>
+				<li><a href="projects.html" class="gradient-mobile-menu-text">My Projects</a></li>
+				<li><a href="about.html" class="gradient-mobile-menu-text">About</a></li>
+				<li><a href="story.html" class="gradient-mobile-menu-text">Story</a></li>
+				<li><a href="favorites.html" class="gradient-mobile-menu-text">Favorites</a></li>
+				<li><a href="contact_me.html" class="gradient-mobile-menu-text">Contact me</a></li>
 			</ul>
 		</div>
 
 		<div id="container" class="about-container">
 			<!-- webpage navigation hyperlinks to go to other pages on the web domain -->
-			<nav>
+			<nav class="tablet-desktop">
 				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="projects.html">My Projects</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="contact_me.html">Contact me</a></li>
+					<li><a href="index.html" class="gradient-menu-text">Home</a></li>
+					<li><a href="projects.html" class="gradient-menu-text">My Projects</a></li>
+					<li><a href="about.html" class="gradient-menu-text">About</a></li>
+					<li><a href="story.html" class="gradient-menu-text">Story</a></li>
+					<li><a href="favorites.html" class="gradient-menu-text">Favorites</a></li>
+					<li><a href="contact_me.html" class="gradient-menu-text">Contact me</a></li>
 				</ul>
 			</nav>
 			

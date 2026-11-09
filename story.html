@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- By Sonny
+template.html
+11/8/2026
+ -->
+<html lang="en">
+	<!-- Metadata about the webpage -->
+	<head>
+		<title>Santino Taylor's Portfolio</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		
+		<!-- Favicon data -->
+		<link rel="icon" type="image/png" href="favicon/favicon-96x96.png?v=20261107" sizes="96x96"/>
+		<link rel="icon" type="image/svg+xml" href="favicon/favicon.svg?v=20261107"/>
+		<link rel="shortcut icon" href="favicon/favicon.ico?v=20261107"/>
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png?v=20261107"/>
+		<meta name="apple-mobile-web-app-title" content="Santino"/>
+		<link rel="manifest" href="favicon/site.webmanifest?v=20261107"/>
+
+		<!-- Font data -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+		
+		<!-- JavaScript -->
+		<script src="main.js" defer></script>
+	</head>
+	
+	<!-- all of the webpage contents -->
+	<body>
+		<div id="top-bar">
+			<header>Santino Taylor</header>
+			
+			<img id="menu-icon" class="mobile" src="images/menu_icon.svg" alt="Menu icon">
+		</div>
+
+		<div id="mobile-menu" class="mobile hidden">
+			<div id="mobile-menu-shader" class="mobile"></div>
+
+			<ul>
+				<li><a href="index.html" class="gradient-mobile-menu-text">Home</a></li>
+				<li><a href="projects.html" class="gradient-mobile-menu-text">My Projects</a></li>
+				<li><a href="about.html" class="gradient-mobile-menu-text">About</a></li>
+				<li><a href="story.html" class="gradient-mobile-menu-text">Story</a></li>
+				<li><a href="favorites.html" class="gradient-mobile-menu-text">Favorites</a></li>
+				<li><a href="contact_me.html" class="gradient-mobile-menu-text">Contact me</a></li>
+			</ul>
+		</div>
+
+		<div id="container">
+			<!-- webpage navigation hyperlinks to go to other pages on the web domain -->
+			<nav class="tablet-desktop">
+				<ul>
+					<li><a href="index.html" class="gradient-menu-text">Home</a></li>
+					<li><a href="projects.html" class="gradient-menu-text">My Projects</a></li>
+					<li><a href="about.html" class="gradient-menu-text">About</a></li>
+					<li><a href="story.html" class="gradient-menu-text">Story</a></li>
+					<li><a href="favorites.html" class="gradient-menu-text">Favorites</a></li>
+					<li><a href="contact_me.html" class="gradient-menu-text">Contact me</a></li>
+				</ul>
+			</nav>
+
+            <!-- Put different sections into the story about the proccess -->
+			<div id="story">
+                <h1>Story</h1>
+                <h2>Programming Story 1: Python Automation</h2>
+				<dl class="story-list">
+					<dt>● The Problem</dt>
+					<dd>
+						I was playing a simulator game that required hours of repetitive, 
+                    	mindless clicking just to unlock the fun late-game rewards. 
+                    	I realized my time was better spent writing python code to do the grinding 
+                    	for me!
+					</dd>
+					
+					<dt>● The Engineering Challenges</dt>
+					<dd>
+						Games are dynamic environments. 
+						To make the bot successful, I couldn't just program static 
+						clicks. I had to teach the script to 'see' the screen, 
+						handle random events (like pop-ups or lag), conditions, multitask, and safely 
+						navigate UI menus.
+					</dd>
+
+					<dt>● The Process and the Breakthrough</dt>
+					<dd>
+						To start, I have to use <code class="code-sample">pyautogui</code> or <code class="code-sample">pynput</code> (computer input), 
+						<code>threading</code> (multitasking), <code class="code-sample">PIL</code> (image grabbing), 
+						and other libraries that could be used depending the project.
+						I have to detect if an event happened and use the color of pixels to detect certain conditions (e.g., having enough points or money to afford a perk or having to rebirth).
+						Use of <code>pyautogui</code> or <code>pynput</code> to act and actually do things.
+						I also created a start and stop keybind to start/stop immediately no matter where the thread is executing.
+						For the start/stop keybind I had to use threading. I created a <code>GamerBot</code> class to combine all of these tools into easy pre-set functions.
+					</dd>
+
+					<dt>● The Result</dt>
+					<dd>
+						I have been able to create more advanced smart innovative bots very quickly!
+						100% automated. I left my computer overnight grinding millions in in-game 
+						currency very effectively automating as many in-game features that 
+						reward my player as I can!
+					</dd>
+				</dl>
+			</div>
+			<!-- the very bottom of the page where it contains copyright, trademarks, Terms and Conditions, privacy policy, and more important documents. -->
+			<footer>
+				<!--<p>Personal Email Address: <a href="mailto:santinotaylor2009@gmail.com">santinotaylor2009@gmail.com</a><br>
+				Educational insitution: <a href="https://cvccworks.edu/" target="_blank">cvccworks.edu</a><br></p>-->
+				
+				<p>© Copyright 2026 Santino Taylor. All rights reserved.</p>
+			</footer>
+		</div>
+	</body>
+</html>
