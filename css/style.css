@@ -1,23 +1,40 @@
 /*
 Author: Santino Taylor
-Date: 11/1/2026
+Date: 11/8/2026
 File Name: styles.css
 */
 
-/* CSS reset rules to force cross-browser consistency by removing the default styles set by browsers.  */
-body, header, nav, footer, main, div, h1, iframe, img {
-	margin: 0;
-	padding: 0;
-	border: 0;
+/* CSS reset rules to force cross-browser consistency by removing browser defaults. */
+*, *::before, *::after {
 	box-sizing: border-box;
-	overflow-x: hidden;
-	/* For testing and developmental purposes*/
-	/*border: 2px solid #F00;*/
 }
 
-/* styles for the HTML page */
+* {
+	margin: 0;
+	padding: 0;
+}
+
 html {
-  scroll-behavior: smooth;
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+	scroll-behavior: smooth;
+}
+
+body {
+	min-height: 100vh;
+}
+
+img, iframe, video, canvas, svg {
+	max-width: 100%;
+}
+
+/* Show mobile class, hide tablet-desktop */
+.mobile{
+	display: block;
+}
+
+.tablet-desktop{
+	display: none;
 }
 
 /* style rules for body and images */
@@ -32,9 +49,27 @@ img {
 	display: block;
 }
 
+code {
+	background-color: rgb(37, 37, 37);
+	border-radius: 7px;
+	padding: 3px;
+}
+
 .trophy_pictures {
 	width: 325px;
 	float: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	padding: 1%;
+}
+
+ul, ol {
+	padding-left: 4%;
+}
+
+dl {
+	padding-left: 4%;
 }
 
 /* style rules for the top bar for a smooth transition between screen sizes.*/
@@ -52,7 +87,6 @@ img {
 	align-items: center;
 	justify-content: space-between;
 	gap: 1rem;
-
   	color: rgb(240, 240, 240);
 	font-family: "Inter", sans-serif;
 	text-align: center;
@@ -67,7 +101,6 @@ header {
 }
 
 #mobile-menu {
-	display: block;
 	position: fixed;
 	z-index: 3;
 	top: clamp(3.5rem, 12vw, 6rem);
@@ -93,7 +126,6 @@ header {
 }
 
 #mobile-menu-shader {
-	display: block;
 	position: fixed;
 	top: clamp(3.5rem, 12vw, 6rem);
 	right: 0;
@@ -131,7 +163,7 @@ header {
 	padding: 0.5rem 0;
 }
 
-.gradient-menu-text {
+.gradient-mobile-menu-text {
 	display: block;
 	text-align: center;
 	padding: 1rem 1rem;
@@ -147,14 +179,32 @@ header {
 	transition: background-position 0.6s ease-in-out, transform 0.3s ease-in-out;
 }
 
+.gradient-mobile-menu-text:hover {
+	background-position: 100% center;
+	transform: scale(1.2);
+}
+
+.gradient-menu-text {
+	display: block;
+	text-align: center;
+	padding: 1rem 1rem;
+	text-decoration: none;
+	font-family: "Inter", sans-serif;
+
+	background-image: linear-gradient(to right, #F0F0F0, #8b8888, #F0F0F0);
+	background-size: 1000% auto;
+	background-position: 0% center;
+	background-clip: text;
+	color: transparent;
+	transition: background-position 0.6s ease-in-out, transform 0.3s ease-in-out;
+}
+
 .gradient-menu-text:hover {
-	background-position: 100% center; /* switched it opposite */
-	/*font-size: clamp(2.75rem, 4vw, 3rem);*/
+	background-position: 100% center;
 	transform: scale(1.2);
 }
 
 #menu-icon {
-	display: block;
 	flex: 0 0 clamp(2rem, 8vw, 3rem);
 	width: clamp(2rem, 8vw, 3rem);
 	height: auto;
@@ -177,9 +227,9 @@ header {
 
 /* style rules for navigation */
 nav {
-	display: none;
-	min-width: 0;
-	margin: 0;
+	position: sticky;
+	top: clamp(3.5rem, 12vw, 6rem);
+	width: 100%;
 	font-size: clamp(1rem, 1.4vw, 1.35rem);
 	line-height: 1.1;
 	overflow: hidden;
@@ -212,9 +262,10 @@ nav li a {
 	color: rgb(240, 240, 240);
 	font-family: "Inter", sans-serif;
 	text-align: center;
+	
 }
 
-.about-container h1, .about-container h2, .about-container ul, .about-container ol, .about-container dl{
+.about-container *{
 	text-align: left;
 }
 
@@ -250,10 +301,6 @@ section li a:link{
 	text-decoration: underline;
 }
 
-#coursework-table {
-	display: none;
-}
-
 #coursework-table table {
 	border-collapse: collapse;
 	margin: 0 auto;
@@ -275,17 +322,26 @@ section li a:link{
 	font-size: 1.25rem;
 }
 
-/*
-#container h1 {
-	padding-left: 37%;
-	padding-right: 37%;
+#story {
+	width: 90%;
+	margin-left: 5%;
 }
 
-#container p {
-	padding-left: 37%;
-	padding-right: 37%;
+#story *{
+	text-align: left;
 }
-*/
+
+.story-list dt {
+	font-weight: bold;
+	padding: 1%;
+	padding-top: 2.5%;
+	font-size: 1.25rem;
+}
+
+.story-list dd {
+	padding-left: 4%;
+	font-size: 1.1rem;
+}
 
 .programming_languages {
 	font-weight: bold;
@@ -297,10 +353,20 @@ section li a:link{
 	text-decoration: underline;
 }
 
+#favorite-song {
+	width: clamp(20rem, 70vw, 50rem);
+	height: clamp(12rem, 35vw, 27rem);
+}
+
+.picture-of-wilbur {
+	width: 17%;
+	margin: 0 auto;
+}
+
 .map {
 	/*border: 8px solid #000;*/
-	width: clamp(17rem, 60vw, 45rem);;
-	height: clamp(12rem, 35vw, 27rem);;
+	width: clamp(17rem, 60vw, 45rem);
+	height: clamp(12rem, 35vw, 27rem);
 }
 
 form {
@@ -326,19 +392,15 @@ No hamburger menu, provide the text links in the nav bar.
 */
 
 @media screen and (min-width: 680px) {
-    #menu-icon {
-	  display: none;
-	}
-  
-	nav {
-	  display: block;
-	}
-
-	#projects-grid-container {
+	.tablet-desktop {
 		display: block;
 	}
 
-	#coursework-table {
+	.mobile {
+		display: none;
+	}
+
+	#projects-grid-container {
 		display: block;
 	}
 }
